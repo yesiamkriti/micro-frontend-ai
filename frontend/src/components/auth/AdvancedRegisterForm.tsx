@@ -20,7 +20,7 @@ export default function AdvancedRegisterForm() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const res = await axios.post('/auth/register', data)
+      await axios.post('/auth/register', data)
       setSuccess('Registration successful! You can now log in.')
       setServerError('')
     } catch (err: any) {
